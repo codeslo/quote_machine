@@ -25,6 +25,8 @@ const quoteArray = [
     }
 ];
 
+// tracks the last quote used to avoid duplicates
+let lastQuote = null;
 
 function getQuote() {
     // get a random quote from the quote array
@@ -33,6 +35,8 @@ function getQuote() {
     while (newQuote === lastQuote) {
         newQuote = Math.floor(Math.random() * quoteArray.length);
     }
+    // set lastQuote value to the current newQuote
+    lastQuote = newQuote;
 
     return quoteArray[newQuote];
 }
@@ -41,8 +45,13 @@ function getQuote() {
 
 function newQuote() {
     // calls getQuote and changes display to show it
+    const quote = getQuote();
 
-    // add code here
+    const quoteText = document.getElementById('quote-text');
+    const quoteAuthor = document.getElementById('quote-author');
+
+    quoteText.innerHTML = `"${quote.text}"`;
+    quoteAuthor.innerHTML = `~ ${quote.author} `;
 
 }
 
