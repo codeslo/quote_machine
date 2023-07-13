@@ -42,7 +42,7 @@ function getQuote() {
 function newQuote() {
     // calls getQuote and changes display to show it
 
-    // add code here
+    console.log('You clicked the button!');
 
 }
 
