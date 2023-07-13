@@ -25,6 +25,8 @@ const quoteArray = [
     }
 ];
 
+let lastQuote = null;
+
 
 function getQuote() {
     // get a random quote from the quote array
@@ -42,7 +44,7 @@ function getQuote() {
 function newQuote() {
     // calls getQuote and changes display to show it
 
-    console.log('You clicked the button!');
+
 
 }
 

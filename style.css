@@ -38,6 +38,10 @@ header {
     font-style: italic;
 }
 
+.quote-author::before {
+    content: "~ ";
+}
+
 .button-div {
     text-align: center;
     padding: 75px;
