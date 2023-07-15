@@ -39,7 +39,7 @@ function getQuote() {
     // update lastQuote so we don't get the current one next time.
     lastQuote = quote;
 
-    return quoteArray[newQuote];
+    return quoteArray[quote];
 }
 
 

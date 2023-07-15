@@ -30,15 +30,15 @@ let lastQuote = null;
 
 function getQuote() {
     // get a random quote from the quote array
-    let newQuote = Math.floor(Math.random() * quoteArray.length);
+    let quote = Math.floor(Math.random() * quoteArray.length);
     // check to see if newQuote is the same as the last quote. If so, get a new value
-    while (newQuote === lastQuote) {
-        newQuote = Math.floor(Math.random() * quoteArray.length);
+    while (quote === lastQuote) {
+        quote = Math.floor(Math.random() * quoteArray.length);
     }
     // set lastQuote value to the current newQuote
-    lastQuote = newQuote;
+    lastQuote = quote;
 
-    return quoteArray[newQuote];
+    return quoteArray[quote];
 }
 
 
@@ -51,7 +51,7 @@ function newQuote() {
     const quoteAuthor = document.getElementById('quote-author');
 
     quoteText.innerHTML = `"${quote.text}"`;
-    quoteAuthor.innerHTML = `~ ${quote.author} `;
+    quoteAuthor.innerHTML = `${quote.author} `;
 
 }
 
